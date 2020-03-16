@@ -21,7 +21,7 @@ public class Controller {
         load();
     }
     void load() {
-        var persons = dao.getAll();
+        var people = dao.getAll();
         persons.stream().forEach(System.out::println);
     }
     public void click(ActionEvent __) {
