@@ -22,7 +22,7 @@ public class Controller {
     }
     void load() {
         var people = dao.getAll();
-        persons.stream().forEach(System.out::println);
+        people.stream().forEach(System.out::println);
     }
     public void click(ActionEvent __) {
         var matNr = String.format("%05d", random.nextInt(99999));
