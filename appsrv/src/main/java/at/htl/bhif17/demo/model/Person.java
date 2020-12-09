@@ -1,9 +1,6 @@
 package at.htl.bhif17.demo.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Person {
@@ -14,6 +11,10 @@ public class Person {
     private String firstName;
     private String lastName;
     private String matNr;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="course_id")
+    private Course course;
 
     public static Builder builder() {
         return new Builder();
@@ -62,6 +63,14 @@ public class Person {
     }
     public void setMatNr(String matNr) {
         this.matNr = matNr;
+    }
+
+    public Course getCourse() {
+        return course;
+    }
+
+    public void setCourse(Course school) {
+        this.course = school;
     }
 
     @Override

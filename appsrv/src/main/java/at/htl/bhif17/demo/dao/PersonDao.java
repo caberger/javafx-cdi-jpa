@@ -20,4 +20,11 @@ public class PersonDao {
     public Person save(Person person) {
         return em.merge(person);
     }
+    public Person get(int id) {
+        return em.find(Person.class, id);
+    }
+
+    public void remove(Person person) {
+        em.remove(person);
+    }
 }
