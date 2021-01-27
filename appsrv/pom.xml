@@ -7,7 +7,7 @@
   <version>1.0-SNAPSHOT</version>
   <properties>
     <cucumber.version>6.8.1</cucumber.version>
-    <junit.version>4.13</junit.version>
+    <junit.version>4.13.1</junit.version>
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
     <docker-plugin.version>0.34.0</docker-plugin.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
